@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>codificacion de Huffman</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="huffman-section">
+      <div class="box-content span-grid-2">
+        <div class="header-box-content">
+          <div></div>
+          <span class="text-head-info">Texto a codificar</span>
+          <div id="text_digit" class="digit">0</div>
+        </div>
+        <textarea
+          class="box-info"
+          id="paragraph_text"
+          oninput="convert(), main()"
+          cols="51"
+          rows="15"
+          placeholder="Escribe un texto"
+        ></textarea>
+        <div id="binary" class="hidden"></div>
+      </div>
+
+      <div class="box-content">
+        <div class="header-box-content">
+          <div></div>
+          <span class="text-head-info">Codificación</span>
+          <div id="result" class="digit">0%</div>
+          <div id="binary_digit" class="digit hidden">0</div>
+        </div>
+        <div class="box-info box-pad" id="coded"></div>
+      </div>
+
+      <div class="box-content">
+        <div class="header-box-content">
+          <div></div>
+          <span class="text-head-info">Frecuencia</span>
+          <div id="encoded_digit" class="digit">0</div>
+          <div id="encoded_digit" class="digit hidden">0</div>
+        </div>
+        <div class="box-info box-pad" id="freq"></div>
+      </div>
+
+      <div class="box1 span-grid-2">
+        <div class="header-box-content">
+          <div></div>
+          <span class="text-head-info">Arbol binario</span>
+          <div></div>
+        </div>
+        <div class="box graph" id="huffman"></div>
+      </div>
+    </section>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/huffman.js"></script>
+    <script src="./js/draw.js"></script>
+    <script src="./js/d3js.js"></script>
+  </body>
+</html>
